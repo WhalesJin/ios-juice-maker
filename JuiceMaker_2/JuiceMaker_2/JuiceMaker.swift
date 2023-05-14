@@ -6,7 +6,7 @@
 //
 
 struct JuiceMaker {
-    var fruitStore: FruitStore
+    private var fruitStore: FruitStore
     
     init(store: FruitStore) {
         self.fruitStore = store
@@ -15,7 +15,6 @@ struct JuiceMaker {
     mutating func takeOrder(_ juice: Juice) {
         do {
             try makeJuice(juice)
-            print("\(juice.name) 쥬스가 완성되었습니다.")
         } catch JuiceMakerError.invalidFruit {
             print("올바르지 않은 과일 이름입니다.")
         } catch JuiceMakerError.invalidJuice {
@@ -27,11 +26,12 @@ struct JuiceMaker {
     
     mutating func makeJuice(_ juice: Juice) throws {
         for (fruit, amount) in juice.recipe {
-            if !fruitStore.compareAmount(fruit, with: amount) {
-                try fruitStore.increaseFruitStock(fruit, amount: amount)
-            } else {
+            if fruitStore.isStockSufficient(fruit, with: amount) {
                 try fruitStore.decreaseFruitStock(fruit, amount: amount)
+            } else {
+                try fruitStore.increaseFruitStock(fruit, amount: amount)
             }
         }
+        print("\(juice.name) 쥬스가 완성되었습니다.")
     }
 }

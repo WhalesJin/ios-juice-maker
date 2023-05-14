@@ -5,6 +5,6 @@
 //  Created by Whales on 2023/05/12.
 //
 
-enum Fruit: Hashable {
+enum Fruit {
     case strawberry, banana, pineapple, mango, kiwi
 }
