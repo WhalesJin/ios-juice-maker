@@ -12,7 +12,7 @@ class FruitStore {
         self.fruitInventory = fruitInventory
     }
     
-    func readCurrentStock(for fruit: Fruit) throws -> Int {
+    private func readCurrentStock(for fruit: Fruit) throws -> Int {
         guard let currentAmount = fruitInventory[fruit] else {
             throw JuiceMakerError.invalidFruit
         }
@@ -25,16 +25,12 @@ class FruitStore {
     }
     
     func decreaseFruitStock(_ fruit: Fruit, amount: Int) throws {
-        guard let currentAmount = fruitInventory[fruit] else {
-            throw JuiceMakerError.invalidFruit
-        }
+        let currentAmount = try readCurrentStock(for: fruit)
         fruitInventory[fruit] = currentAmount - amount
     }
     
     func increaseFruitStock(_ fruit: Fruit, amount: Int) throws {
-        guard let currentAmount = fruitInventory[fruit] else {
-            throw JuiceMakerError.invalidFruit
-        }
+        let currentAmount = try readCurrentStock(for: fruit)
         fruitInventory[fruit] = currentAmount + amount
     }
 }

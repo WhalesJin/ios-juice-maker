@@ -16,9 +16,11 @@ let mangoJuice = Juice(name: "망고", recipe: [.mango: 3])
 let strawNanaJuice = Juice(name: "딸바", recipe: [.strawberry: 10, .banana: 1])
 let mangKiJuice = Juice(name: "망키", recipe: [.mango: 2, .kiwi: 1])
 
-print(whales.fruitInventory)
+//print(whales.fruitInventory)
 qoocrab.takeOrder(strawNanaJuice)
-print(whales.fruitInventory)
+qoocrab.takeOrder(mangoJuice)
+qoocrab.takeOrder(strawberryJuice)
+//print(whales.fruitInventory)
 
 
 
