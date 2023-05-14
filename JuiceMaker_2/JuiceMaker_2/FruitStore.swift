@@ -19,8 +19,8 @@ class FruitStore {
         return currentAmount
     }
     
-    func isStockSufficient(_ fruit: Fruit, with requiredAmount: Int) -> Bool {
-        let currentStock = (try? readCurrentStock(for: fruit)) ?? 0
+    func isStockSufficient(_ fruit: Fruit, with requiredAmount: Int) throws -> Bool {
+        let currentStock = try readCurrentStock(for: fruit)
         return currentStock >= requiredAmount
     }
     

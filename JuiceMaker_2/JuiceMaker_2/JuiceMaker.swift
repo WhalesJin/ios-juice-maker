@@ -26,7 +26,7 @@ struct JuiceMaker {
     
     mutating func makeJuice(_ juice: Juice) throws {
         for (fruit, amount) in juice.recipe {
-            guard fruitStore.isStockSufficient(fruit, with: amount) else {
+            guard try fruitStore.isStockSufficient(fruit, with: amount) else {
                 throw JuiceMakerError.insufficientFruit
             }
             try fruitStore.decreaseFruitStock(fruit, amount: amount)
