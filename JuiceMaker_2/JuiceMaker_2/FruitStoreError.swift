@@ -5,7 +5,7 @@
 //  Created by Whales on 2023/05/12.
 //
 
-enum JuiceMakerError: Error {
+enum FruitStoreError: Error {
     case invalidFruit, insufficientFruit
-//    case invalidJuice
 }
+

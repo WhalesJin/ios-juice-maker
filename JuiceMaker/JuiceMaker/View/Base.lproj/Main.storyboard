@@ -236,7 +236,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="맛있는 쥬스를 만들어 드려요!" id="Eal-fj-o4N">
-                        <barButtonItem key="rightBarButtonItem" title="재고수정" id="C3q-Te-cNT"/>
+                        <barButtonItem key="rightBarButtonItem" title="재고수정" id="C3q-Te-cNT">
+                            <connections>
+                                <segue destination="Yu1-lM-nqp" kind="show" id="CPF-8P-TMi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bananaJuiceButton" destination="y2A-PH-DJY" id="rro-TK-qSj"/>
@@ -244,7 +248,7 @@
                         <outlet property="mangKiJuiceButton" destination="ngP-kF-Yii" id="ooQ-lR-8nC"/>
                         <outlet property="mangoJuiceButton" destination="q6G-4X-bVm" id="8fN-ae-TRB"/>
                         <outlet property="pineappleJuiceButton" destination="BFb-ka-wGA" id="fJL-7G-gbe"/>
-                        <outlet property="strawNanaJuiceButton" destination="y2A-PH-DJY" id="SqR-1M-YIu"/>
+                        <outlet property="strawberryBananaJuiceButton" destination="y2A-PH-DJY" id="SqR-1M-YIu"/>
                         <outlet property="strawberryJuiceButton" destination="avd-o5-3JM" id="feZ-RB-Zbw"/>
                     </connections>
                 </viewController>
@@ -402,6 +406,9 @@
             <point key="canvasLocation" x="1637" y="21"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CPF-8P-TMi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

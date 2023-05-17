@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var pineappleJuiceButton: UIButton!
     @IBOutlet var kiwiJuiceButton: UIButton!
     @IBOutlet var mangoJuiceButton: UIButton!
-    @IBOutlet var strawNanaJuiceButton: UIButton!
+    @IBOutlet var strawberryBananaJuiceButton: UIButton!
     @IBOutlet var mangKiJuiceButton: UIButton!
     
     let strawberryJuice = Juice(name: "딸기", recipe: [.strawberry: 16])
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     @IBAction func tabMangoJuiceButton(_ sender: UIButton) {
     }
-    @IBAction func tabStrawNanaJuiceButton(_ sender: UIButton) {
+    @IBAction func tabStrawberryBananaJuiceButton(_ sender: UIButton) {
         
     }
     @IBAction func tabMangKiJuiceButton(_ sender: UIButton) {

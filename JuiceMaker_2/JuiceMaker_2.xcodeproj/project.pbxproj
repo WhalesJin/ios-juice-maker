@@ -12,7 +12,7 @@
 		3C33AB822A0C1AB10009FA60 /* JuiceMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33AB812A0C1AB10009FA60 /* JuiceMaker.swift */; };
 		3C33ABAE2A0D5BA80009FA60 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33ABAD2A0D5BA80009FA60 /* Fruit.swift */; };
 		3C33ABB02A0D5BD10009FA60 /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33ABAF2A0D5BD10009FA60 /* Juice.swift */; };
-		3C33ABB22A0D5BF70009FA60 /* JuiceMakerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33ABB12A0D5BF70009FA60 /* JuiceMakerError.swift */; };
+		3C33ABB22A0D5BF70009FA60 /* FruitStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33ABB12A0D5BF70009FA60 /* FruitStoreError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +34,7 @@
 		3C33AB812A0C1AB10009FA60 /* JuiceMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMaker.swift; sourceTree = "<group>"; };
 		3C33ABAD2A0D5BA80009FA60 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		3C33ABAF2A0D5BD10009FA60 /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
-		3C33ABB12A0D5BF70009FA60 /* JuiceMakerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerError.swift; sourceTree = "<group>"; };
+		3C33ABB12A0D5BF70009FA60 /* FruitStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitStoreError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 				3C33AB762A0C1A680009FA60 /* main.swift */,
 				3C33ABAD2A0D5BA80009FA60 /* Fruit.swift */,
 				3C33ABAF2A0D5BD10009FA60 /* Juice.swift */,
-				3C33ABB12A0D5BF70009FA60 /* JuiceMakerError.swift */,
+				3C33ABB12A0D5BF70009FA60 /* FruitStoreError.swift */,
 				3C33AB7D2A0C1A7F0009FA60 /* FruitStore.swift */,
 				3C33AB812A0C1AB10009FA60 /* JuiceMaker.swift */,
 			);
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C33ABB22A0D5BF70009FA60 /* JuiceMakerError.swift in Sources */,
+				3C33ABB22A0D5BF70009FA60 /* FruitStoreError.swift in Sources */,
 				3C33ABAE2A0D5BA80009FA60 /* Fruit.swift in Sources */,
 				3C33AB7E2A0C1A7F0009FA60 /* FruitStore.swift in Sources */,
 				3C33AB772A0C1A680009FA60 /* main.swift in Sources */,

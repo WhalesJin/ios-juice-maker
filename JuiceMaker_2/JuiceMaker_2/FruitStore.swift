@@ -14,24 +14,25 @@ class FruitStore {
     
     private func readCurrentStock(for fruit: Fruit) throws -> Int {
         guard let currentAmount = fruitInventory[fruit] else {
-            throw JuiceMakerError.invalidFruit
+            throw FruitStoreError.invalidFruit
         }
         return currentAmount
     }
     
-    func isStockSufficient(_ fruit: Fruit, with requiredAmount: Int) throws -> Bool {
+    func isStockSufficient(_ fruit: Fruit, with requiredAmount: Int) throws {
         let currentStock = try readCurrentStock(for: fruit)
-        return currentStock >= requiredAmount
+        guard currentStock >= requiredAmount else {
+            throw FruitStoreError.insufficientFruit
+        }
     }
     
-    func decreaseFruitStock(_ fruit: Fruit, amount: Int) throws {
+    func decreaseFruitStock(_ fruit: Fruit, by amount: Int) throws {
         let currentAmount = try readCurrentStock(for: fruit)
         fruitInventory[fruit] = currentAmount - amount
     }
     
-    func increaseFruitStock(_ fruit: Fruit, amount: Int) throws {
+    func increaseFruitStock(_ fruit: Fruit, by amount: Int) throws {
         let currentAmount = try readCurrentStock(for: fruit)
         fruitInventory[fruit] = currentAmount + amount
     }
 }
-
